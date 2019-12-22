@@ -32,6 +32,11 @@ public class HomeController {
         return repository.save(userEntity) != null;
     }
 
+    @GetMapping("/admin/a")
+    public String getAdminA() {
+        return "This is a protected route if you reached here you have to be an admin";
+    }
+
     @GetMapping("/admin")
     public String getAdminPage() {
         return "<h1>Welcome Admin!</h1>";
